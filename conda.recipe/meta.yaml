@@ -1,0 +1,44 @@
+# {% set data = load_setup_py_data() %}
+{% set version = '0.1.0' %}
+{% set url = 'https://choppy.3steps.cn/go-choppy/lollipop-plot-r/' %}
+{% set description = 'An choppy plugin to draw an interactive lollipop plot.' %}
+{% set long_description = 'The lollipop plot plugin will draw an interactive lollipop plot by using shiny and maftools library.' %}
+
+package:
+  name: lollipop-plot-r-plugin
+  version: {{ version }}
+
+
+source:
+  - path: ../
+
+
+build:
+  include_recipe: True
+  entry_points:
+    - lollipop-plot-r = lollipop_plot.lollipop_plot:LollipopPlotRPlugin
+
+requirements:
+  build:
+    - setuptools
+    - python
+
+  run:
+    - python
+    - mk-media-extension>=0.1.0
+    - bioconductor-maftools
+
+# test:
+#   imports:
+#     - pie_chart
+
+about:
+  home: {{ url }}
+  license: BSD 3-Clause
+  license_file: LICENSE.md
+  license_family: BSD
+
+  summary: {{ description }}
+  description: {{ long_description }}
+  doc_url: http://docs.3steps.cn
+  dev_url: {{ url }}
