@@ -3,20 +3,17 @@ from lollipop_plot.version import get_version
 
 
 setup(
-    name='lollipop-plot-r-plugin',
+    name='lollipop-plot-r',
     version=get_version(),
-    description='An choppy plugin to draw an interactive lollipop plot.',
+    description='An biovis plugin to draw an interactive lollipop plot.',
     long_description='The lollipop plot plugin will draw an interactive lollipop plot by using shiny and maftools library.',
-    keywords='choppy, plugin, lollipop-plot, interactive',
-    url='https://choppy.3steps.cn/go-choppy/lollipop-plot-r-plugin/',
+    keywords='biovis-plugin, lollipop-plot, interactive',
+    url='https://github.com/biovis-report/lollipop-plot-r',
     author='Jingcheng Yang',
     author_email='yjcyxky@163.com',
     license='MIT',
     python_requires='>=3.4',
     include_package_data=True,
-    install_requires=[
-        'mk-media-extension>=0.1.0'
-    ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -31,7 +28,7 @@ setup(
     ],
     packages=find_packages(),
     entry_points={
-        'choppy.plugins': [
+        'biovis.plugins': [
             'lollipop-plot-r = lollipop_plot.lollipop_plot:LollipopPlotRPlugin'
         ]
     }
