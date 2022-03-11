@@ -2,12 +2,12 @@
 from __future__ import unicode_literals
 
 import os
-from mk_media_extension.plugin import BasePlugin
+from biovis_media_extension.plugin import BasePlugin
 
 
 class LollipopPlotRPlugin(BasePlugin):
     """
-    LollipopPlotRPlugin plugin for mk_media_extension.
+    LollipopPlotRPlugin plugin for biovis_media_extension.
 
     :Example:
     @lollipop-plot-r()
